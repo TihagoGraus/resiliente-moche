@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tienda virtual comunitaria de productos preventivos y de resiliencia frente al Fenómeno El Niño en Miramar y Moche.">
+  <title>Resiliente Moche | Tienda Virtual Comunitaria</title>
+
+  <!-- Favicon oficial -->
+  <link rel="icon" href="imagenes/icono-proyecto.png" type="image/png">
+
+  <!-- Hoja de estilos externa -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Encabezado con navegación principal -->
+  <header class="encabezado">
+    <div class="contenedor encabezado-contenido">
+      <div class="marca">
+        <img src="imagenes/logo-resiliente.png" alt="Logotipo de Resiliente Moche: escudo con gota de agua protectora" width="46" height="46" class="logo">
+        <span class="nombre-tienda">Resiliente Moche</span>
+      </div>
+
+      <nav class="navegacion" aria-label="Menú principal">
+        <a href="#inicio" class="enlace-nav">Inicio</a>
+        <a href="#categorias" class="enlace-nav">Categorías</a>
+        <a href="#catalogo" class="enlace-nav">Catálogo</a>
+        <a href="#carrito-seccion" class="enlace-nav enlace-carrito" id="enlace-carrito-nav">
+          Carrito <span class="insignia-carrito" id="contador-carrito">0</span>
+        </a>
+        <a href="#nosotros" class="enlace-nav">Nosotros</a>
+        <a href="#comunidad" class="enlace-nav">Comunidad</a>
+        <a href="#contacto" class="enlace-nav">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Contenido principal -->
+  <main>
+
+    <!-- 1. Sección Hero / Inicio (con imagen lateral y fondo con degradado) -->
+    <section id="inicio" class="seccion-hero">
+      <div class="contenedor hero-grid">
+        <div class="hero-texto">
+          <span class="etiqueta-alerta">Comunidad de Miramar & Moche</span>
+          <h1>Prepárate antes de que llueva</h1>
+          <p class="hero-descripcion">
+            Kits familiares, botas de jebe, repelentes y linternas solares. Adquiere insumos de prevención local y confirma tu pedido directo por WhatsApp sin pagos bancarios en la web.
+          </p>
+          <div class="hero-botones">
+            <a href="#catalogo" class="boton boton-amarillo">Ver catálogo completo</a>
+            <a href="#contacto" class="boton boton-borde-blanco">Hacer una consulta</a>
+          </div>
+
+          <ol class="pasos-compra" aria-label="Cómo comprar en 3 pasos">
+            <li><strong>1. Elige</strong><span>Agrega al carrito</span></li>
+            <li><strong>2. Revisa</strong><span>Ajusta cantidades</span></li>
+            <li><strong>3. Confirma</strong><span>Pide por WhatsApp</span></li>
+          </ol>
+        </div>
+
+        <div class="hero-imagen-bloque">
+          <img src="imagenes/hero.jpg" alt="Familia y vecinos organizados con suministros y kits de prevención frente a lluvias e inundaciones" width="560" height="420" class="hero-foto">
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Franja de confianza comunitaria -->
+    <section class="franja-confianza" aria-label="Ventajas de comprar en Resiliente Moche">
+      <div class="contenedor franja-grid">
+        <div class="franja-item">
+          <span class="franja-icono" aria-hidden="true">💬</span>
+          <div>
+            <strong>Coordinación por WhatsApp</strong>
+            <p>Trato humano, directo y sin pasarelas de pago complejas.</p>
+          </div>
+        </div>
+        <div class="franja-item">
+          <span class="franja-icono" aria-hidden="true">📍</span>
+          <div>
+            <strong>Emprendimiento Local</strong>
+            <p>Atención prioritaria para Miramar, Las Delicias y Moche.</p>
+          </div>
+        </div>
+        <div class="franja-item">
+          <span class="franja-icono" aria-hidden="true">🛡️</span>
+          <div>
+            <strong>Resiliencia ante El Niño</strong>
+            <p>Prevención de inundaciones, humedad, cortes de luz y dengue.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Sección Compra por Categoría (4 tarjetas interactivas) -->
+    <section id="categorias" class="seccion fondo-celeste">
+      <div class="contenedor">
+        <div class="seccion-titulo-grupo">
+          <span class="subtitulo-seccion">Encuentra lo que necesitas</span>
+          <h2>Compra por Categoría</h2>
+          <p>Haz clic en cualquier categoría para filtrar automáticamente los productos disponibles.</p>
+        </div>
+
+        <div class="grid-categorias">
+          <button type="button" class="tarjeta-categoria cat-borde-emergencia" data-categoria="Emergencia">
+            <div class="cat-imagen-contenedor">
+              <img src="imagenes/cat-emergencia.jpg" alt="Categoría Emergencia: botiquines y mochilas de supervivencia" width="300" height="200" loading="lazy">
+            </div>
+            <div class="cat-info">
+              <span class="cat-distintivo badge-emergencia">Emergencia</span>
+              <h3>Primeros Auxilios</h3>
+              <p>Mochilas 72h, agua y botiquines.</p>
+            </div>
+          </button>
+
+          <button type="button" class="tarjeta-categoria cat-borde-inundacion" data-categoria="Inundación">
+            <div class="cat-imagen-contenedor">
+              <img src="imagenes/cat-inundacion.jpg" alt="Categoría Inundación: botas de jebe, impermeables y barreras" width="300" height="200" loading="lazy">
+            </div>
+            <div class="cat-info">
+              <span class="cat-distintivo badge-inundacion">Inundación</span>
+              <h3>Protección de Agua</h3>
+              <p>Botas, ponchos y sacos de arena.</p>
+            </div>
+          </button>
+
+          <button type="button" class="tarjeta-categoria cat-borde-dengue" data-categoria="Dengue">
+            <div class="cat-imagen-contenedor">
+              <img src="imagenes/cat-dengue.jpg" alt="Categoría Dengue: repelentes y mallas mosquiteras protectoras" width="300" height="200" loading="lazy">
+            </div>
+            <div class="cat-info">
+              <span class="cat-distintivo badge-dengue">Dengue</span>
+              <h3>Salud Preventiva</h3>
+              <p>Repelentes y mallas mosquiteras.</p>
+            </div>
+          </button>
+
+          <button type="button" class="tarjeta-categoria cat-borde-energia" data-categoria="Energía">
+            <div class="cat-imagen-contenedor">
+              <img src="imagenes/cat-energia.jpg" alt="Categoría Energía: linternas y radios solares recargables" width="300" height="200" loading="lazy">
+            </div>
+            <div class="cat-info">
+              <span class="cat-distintivo badge-energia">Energía</span>
+              <h3>Luz y Alertas</h3>
+              <p>Linternas y radios solares.</p>
+            </div>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Sección Catálogo de Productos -->
+    <section id="catalogo" class="seccion">
+      <div class="contenedor">
+        <div class="seccion-titulo-grupo">
+          <span class="subtitulo-seccion">Catálogo Oficial</span>
+          <h2>Productos Listos para Entrega</h2>
+          <p>Usa el buscador o presiona los botones para filtrar los productos de resiliencia.</p>
+        </div>
+
+        <!-- Buscador en vivo -->
+        <div class="barra-busqueda">
+          <label for="buscador" class="solo-lectores">Buscar producto por nombre o descripción</label>
+          <input type="search" id="buscador" placeholder="🔍 Escribe lo que buscas (ej. linterna, mochila, repelente...)">
+        </div>
+
+        <!-- Botones de filtro de categorías -->
+        <div class="filtros-categoria" role="group" aria-label="Filtro de productos por categoría">
+          <button type="button" class="boton-filtro activo" data-categoria="todos">Todos (10)</button>
+          <button type="button" class="boton-filtro filtro-emergencia" data-categoria="Emergencia">Emergencia</button>
+          <button type="button" class="boton-filtro filtro-inundacion" data-categoria="Inundación">Inundación</button>
+          <button type="button" class="boton-filtro filtro-dengue" data-categoria="Dengue">Dengue</button>
+          <button type="button" class="boton-filtro filtro-energia" data-categoria="Energía">Energía</button>
+        </div>
+
+        <!-- Cuadrícula donde JavaScript inyectará las 10 tarjetas -->
+        <div class="cuadricula-productos" id="contenedor-productos" aria-live="polite">
+          <!-- Tarjetas renderizadas dinámicamente desde js/main.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Sección Carrito de Compras -->
+    <section id="carrito-seccion" class="seccion fondo-azul-suave">
+      <div class="contenedor">
+        <div class="seccion-titulo-grupo">
+          <span class="subtitulo-seccion">Pedido en curso</span>
+          <h2>Tu Carrito de Compras</h2>
+          <p>Verifica tus productos, modifica cantidades y finaliza tu pedido directamente en WhatsApp.</p>
+        </div>
+
+        <div class="panel-carrito">
+          <!-- Mensaje cuando no hay productos -->
+          <div id="carrito-vacio" class="carrito-vacio">
+            <span class="icono-vacio" aria-hidden="true">🛒</span>
+            <p><strong>Tu carrito está vacío en este momento.</strong></p>
+            <p>Explora nuestro catálogo y agrega los productos de prevención que tu hogar necesita.</p>
+            <a href="#catalogo" class="boton boton-azul">Ir al catálogo</a>
+          </div>
+
+          <!-- Tabla de artículos (visible cuando hay al menos 1 producto) -->
+          <div id="carrito-tabla-contenedor" class="carrito-tabla-contenedor oculta">
+            <table class="tabla-carrito">
+              <caption>Detalle de los artículos seleccionados en tu compra</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Producto</th>
+                  <th scope="col">Precio unitario</th>
+                  <th scope="col">Cantidad</th>
+                  <th scope="col">Subtotal</th>
+                  <th scope="col">Acción</th>
+                </tr>
+              </thead>
+              <tbody id="cuerpo-tabla-carrito">
+                <!-- Filas creadas por JavaScript -->
+              </tbody>
+            </table>
+
+            <div class="carrito-resumen">
+              <div class="total-bloque">
+                <span class="total-etiqueta">Total a coordinar:</span>
+                <span class="total-monto" id="monto-total">S/ 0.00</span>
+              </div>
+
+              <div class="carrito-acciones">
+                <button type="button" id="btn-vaciar-carrito" class="boton boton-secundario">Vaciar carrito</button>
+                <button type="button" id="btn-whatsapp" class="boton boton-amarillo" disabled>Finalizar pedido por WhatsApp</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Sección Nosotros (Texto + Imagen) -->
+    <section id="nosotros" class="seccion">
+      <div class="contenedor">
+        <div class="grid-nosotros">
+          <div class="nosotros-texto">
+            <span class="subtitulo-seccion">Nuestro propósito</span>
+            <h2>Construyendo resiliencia en Miramar y Moche</h2>
+            <p>
+              El impacto del Fenómeno El Niño causa aislamiento, interrupciones eléctricas, lluvias torrenciales y focos infecciosos de dengue en nuestra costa. Frente a este panorama, los pequeños negocios locales corren el riesgo de paralizar sus actividades y las familias de quedarse sin suministros esenciales.
+            </p>
+            <p>
+              <strong>Resiliente Moche</strong> es un proyecto escolar de Educación para el Trabajo (EPT) de la I.E. Jesús Maestro. Unimos la tecnología web nativa con el compromiso comunitario para que cualquier vecino pueda equiparse a tiempo y los emprendedores locales mantengan sus ventas activas durante la emergencia climática.
+            </p>
+            <div class="caja-lema">
+              <p><em>«Educar por amor y cuidar nuestra Casa Común antes de que llueva».</em></p>
+            </div>
+          </div>
+
+          <div class="nosotros-imagen-bloque">
+            <img src="imagenes/nosotros.jpg" alt="Estudiantes y emprendedores de la comunidad de Miramar organizando suministros de prevención" width="520" height="390" loading="lazy" class="foto-nosotros">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Galería Comunitaria (3 fotos del trabajo local) -->
+    <section id="comunidad" class="seccion fondo-celeste">
+      <div class="contenedor">
+        <div class="seccion-titulo-grupo">
+          <span class="subtitulo-seccion">Galería de Acción</span>
+          <h2>Nuestra Comunidad Preparada</h2>
+          <p>Acciones concretas de prevención y solidaridad vecinal en el distrito de Moche.</p>
+        </div>
+
+        <div class="grid-galeria">
+          <figure class="tarjeta-galeria">
+            <div class="galeria-img-contenedor">
+              <img src="imagenes/galeria-1.jpg" alt="Vecinos de Miramar colocando sacos de arena en calles vulnerables" width="400" height="280" loading="lazy">
+            </div>
+            <figcaption>
+              <strong>Muros y contención</strong>
+              <span>Instalación comunitaria de sacos para desviar cauces de lluvia.</span>
+            </figcaption>
+          </figure>
+
+          <figure class="tarjeta-galeria">
+            <div class="galeria-img-contenedor">
+              <img src="imagenes/galeria-2.jpg" alt="Taller informativo sobre prevención del zancudo del dengue y uso de mosquiteros" width="400" height="280" loading="lazy">
+            </div>
+            <figcaption>
+              <strong>Salud en el hogar</strong>
+              <span>Orientación comunitaria sobre eliminación de criaderos y repelentes.</span>
+            </figcaption>
+          </figure>
+
+          <figure class="tarjeta-galeria">
+            <div class="galeria-img-contenedor">
+              <img src="imagenes/galeria-3.jpg" alt="Revisión de mochilas de emergencia familiar y linternas solares en el colegio" width="400" height="280" loading="lazy">
+            </div>
+            <figcaption>
+              <strong>Mochila lista</strong>
+              <span>Capacitación en preparación de botiquines y autonomía energética.</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Sección Contacto -->
+    <section id="contacto" class="seccion">
+      <div class="contenedor">
+        <div class="seccion-titulo-grupo">
+          <span class="subtitulo-seccion">Canal directo</span>
+          <h2>Escríbenos o Visítanos</h2>
+          <p>Respondemos preguntas sobre precios por mayor para juntas vecinales y puntos de entrega.</p>
+        </div>
+
+        <div class="grid-contacto">
+          <!-- Formulario Formspree -->
+          <div class="columna-formulario">
+            <form action="https://formspree.io/f/xrpppgyd" method="POST" class="formulario-contacto">
+              <div class="campo-grupo">
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ej. Rosa Benites" required>
+              </div>
+
+              <div class="campo-grupo">
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" id="correo" name="email" placeholder="tu-correo@ejemplo.com" required>
+              </div>
+
+              <div class="campo-grupo">
+                <label for="mensaje">Tu mensaje o consulta sobre productos:</label>
+                <textarea id="mensaje" name="mensaje" rows="5" placeholder="¿Qué productos necesitas o en qué lugar de Miramar te encuentras?" required></textarea>
+              </div>
+
+              <button type="submit" class="boton boton-amarillo boton-ancho">Enviar mensaje</button>
+            </form>
+          </div>
+
+          <!-- Información complementaria -->
+          <aside class="columna-info-contacto">
+            <h3>Información comunitaria</h3>
+            <p><strong>Ubicación:</strong> Miramar, Distrito de Moche, La Libertad, Perú.</p>
+            <p><strong>Punto de encuentro:</strong> Cercanías a la I.E. Jesús Maestro.</p>
+            <p><strong>Horario comercial:</strong> Lunes a Sábado de 8:00 a.m. a 6:30 p.m.</p>
+            <p><strong>Emergencias climáticas:</strong> WhatsApp activo las 24 horas para canalizar pedidos urgentes.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="pie-pagina">
+    <div class="contenedor pie-contenido">
+      <p><strong>&copy; 2026 Resiliente Moche.</strong> Proyecto escolar de Educación para el Trabajo (EPT).</p>
+      <p>Especialidad: Computación e Informática · I.E. Jesús Maestro (Miramar - Moche, La Libertad).</p>
+      <p>Desarrollado con HTML5 semántico, CSS3 nativo y JavaScript ES6+.</p>
+    </div>
+  </footer>
+
+  <!-- Botón flotante accesible de WhatsApp -->
+  <a id="wa-flotante" class="wa-flotante" href="#" target="_blank" rel="noopener noreferrer" aria-label="Escríbenos una consulta rápida por WhatsApp">
+    <span aria-hidden="true">💬</span> WhatsApp
+  </a>
+
+  <!-- Aviso emergente accesible para confirmación rápida -->
+  <div id="aviso" class="aviso" role="status" aria-live="polite"></div>
+
+  <!-- Lógica en JavaScript nativo -->
+  <script src="js/main.js"></script>
+</body>
+</html>
